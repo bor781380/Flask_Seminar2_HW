@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<body>
+    <img src="{{ url_for('static', filename='image/foto.jpg') }}" alt="Моё фото" width="300">
+    <h1>Привет, {{ user_name }}!</h1>
+    <br>
+    <form action="/welcome" method="post" style="display: inline;">
+        <button type="submit">Выйти</button>
+    </form>
+</body>
+{% endblock %}
